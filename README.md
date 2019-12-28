@@ -6,4 +6,4 @@ Install dependencies.
 
 Running this project
 
-`go run main.go`
+`go run cmd/go-message/main.go`

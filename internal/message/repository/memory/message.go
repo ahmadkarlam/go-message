@@ -6,10 +6,11 @@ import (
 )
 
 type MessageRepository struct {
-	storage MessageStorage
+	storage *MessageStorage
 }
 
-func NewMessageRepository(storage MessageStorage) repository.Repository {
+func NewMessageRepository() repository.Repository {
+	storage := NewMessageStorage()
 	return &MessageRepository{storage: storage}
 }
 

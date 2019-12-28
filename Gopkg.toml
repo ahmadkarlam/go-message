@@ -32,3 +32,11 @@
 [[constraint]]
   name = "github.com/gin-gonic/gin"
   version = "1.5.0"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/gin-contrib/static"
+
+[[constraint]]
+  name = "github.com/hashicorp/go-memdb"
+  version = "1.0.4"

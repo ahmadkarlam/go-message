@@ -10,6 +10,14 @@
   version = "v0.1.0"
 
 [[projects]]
+  branch = "master"
+  digest = "1:4455cc86da1939fad20a1f1458c67a6e3430634886a698694d6af3d285b207df"
+  name = "github.com/gin-contrib/static"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "f81c604d8ac2e088ff70b9ce1809016e6b85e7c0"
+
+[[projects]]
   digest = "1:249eec71412b5d3bb94374292ccbc81a1e8314cd2c6b2c830add3357e6c4b842"
   name = "github.com/gin-gonic/gin"
   packages = [
@@ -48,6 +56,30 @@
   pruneopts = "UT"
   revision = "6c65a5562fc06764971b7c5d05c76c75e84bdbf7"
   version = "v1.3.2"
+
+[[projects]]
+  digest = "1:6e9806a06d00f4d1f90806d7b5cfb11e35dca76503390ca6e704b05ea7051bff"
+  name = "github.com/hashicorp/go-immutable-radix"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "7dd1121b595e4e1bd6dd5caa78e0f5c454740379"
+  version = "v1.1.0"
+
+[[projects]]
+  digest = "1:d3e56a1197f7ec189ca1267b10f856de9bb93620ca913b77ece6b37363a614a7"
+  name = "github.com/hashicorp/go-memdb"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "e3965aaa499eb83f14b147b83866658476828b3f"
+  version = "v1.0.4"
+
+[[projects]]
+  digest = "1:7fae9ec96d10b2afce0da23c378c8b3389319b7f92fa092f2621bba3078cfb4b"
+  name = "github.com/hashicorp/golang-lru"
+  packages = ["simplelru"]
+  pruneopts = "UT"
+  revision = "7f827b33c0f158ec5dfbba01bb0b14a4541fd81d"
+  version = "v0.5.3"
 
 [[projects]]
   digest = "1:7cd2924a44ecf80a319cfa2378529fabd348d011b739fb4eccc565f65e3296c4"
@@ -90,7 +122,7 @@
   version = "1.0.1"
 
 [[projects]]
-  digest = "1:1d4ed6179f215ac661d5c447022b4d10074fbd8829b55e2d405d2a65496a278b"
+  digest = "1:5a1cf4e370bc86137b58da2ae065e76526d32b11f62a7665f36dbd5f41fa95ff"
   name = "github.com/ugorji/go"
   packages = ["codec"]
   pruneopts = "UT"
@@ -124,6 +156,10 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  input-imports = ["github.com/gin-gonic/gin"]
+  input-imports = [
+    "github.com/gin-contrib/static",
+    "github.com/gin-gonic/gin",
+    "github.com/hashicorp/go-memdb",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1

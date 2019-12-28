@@ -1,6 +1,7 @@
 package api
 
 import (
+	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
 
 	"github.com/ahmadkarlam/go-message/internal/message"
@@ -10,8 +11,10 @@ import (
 func Start(port string) error {
 	r := gin.Default()
 
-	r.GET("/v1/message", message.Get)
-	r.POST("/v1/message", message.Add)
+	r.Use(static.Serve("/", static.LocalFile("web", false)))
+	messageHandler := message.NewHandler()
+	r.GET("/v1/message", messageHandler.Get)
+	r.POST("/v1/message", messageHandler.Add)
 	r.POST("/ws", websocket.Initialize)
 
 	err := r.Run(":" + port)

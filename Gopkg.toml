@@ -38,5 +38,5 @@
   name = "github.com/gin-contrib/static"
 
 [[constraint]]
-  name = "github.com/hashicorp/go-memdb"
-  version = "1.0.4"
+  name = "github.com/gorilla/websocket"
+  version = "1.4.1"

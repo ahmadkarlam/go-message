@@ -1,11 +1,13 @@
 package message
 
 import (
+	"log"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 
 	"github.com/ahmadkarlam/go-message/internal/message/service"
+	"github.com/ahmadkarlam/go-message/pkg/websocket"
 )
 
 type Handler struct {
@@ -30,6 +32,10 @@ func (h *Handler) Get(c *gin.Context) {
 
 func (h *Handler) Add(c *gin.Context) {
 	message := h.Service.AddMessage(c.PostForm("body"))
+
+	if err := websocket.GetWebsocket().Broadcast(message.Body); err != nil {
+		log.Println("error broadcast: " + err.Error())
+	}
 
 	c.JSON(http.StatusOK, gin.H{
 		"status":  true,

@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Go Message</title>
 </head>
+
 <body>
-<h1>Hello World</h1>
+<h3>Messages:</h3>
+<pre id="output"></pre>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+    $(function () {
+        let url = 'ws://localhost:8000/ws';
+        let c = new WebSocket(url);
+
+        c.onmessage = function (msg) {
+            let data = JSON.parse(msg.data);
+            $("#output").append(data.created_at + ": " + data.body + "\n");
+        };
+    })
+</script>
+
 </body>
 </html>

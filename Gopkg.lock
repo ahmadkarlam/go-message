@@ -58,28 +58,12 @@
   version = "v1.3.2"
 
 [[projects]]
-  digest = "1:6e9806a06d00f4d1f90806d7b5cfb11e35dca76503390ca6e704b05ea7051bff"
-  name = "github.com/hashicorp/go-immutable-radix"
+  digest = "1:e62657cca9badaa308d86e7716083e4c5933bb78e30a17743fc67f50be26f6f4"
+  name = "github.com/gorilla/websocket"
   packages = ["."]
   pruneopts = "UT"
-  revision = "7dd1121b595e4e1bd6dd5caa78e0f5c454740379"
-  version = "v1.1.0"
-
-[[projects]]
-  digest = "1:d3e56a1197f7ec189ca1267b10f856de9bb93620ca913b77ece6b37363a614a7"
-  name = "github.com/hashicorp/go-memdb"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "e3965aaa499eb83f14b147b83866658476828b3f"
-  version = "v1.0.4"
-
-[[projects]]
-  digest = "1:7fae9ec96d10b2afce0da23c378c8b3389319b7f92fa092f2621bba3078cfb4b"
-  name = "github.com/hashicorp/golang-lru"
-  packages = ["simplelru"]
-  pruneopts = "UT"
-  revision = "7f827b33c0f158ec5dfbba01bb0b14a4541fd81d"
-  version = "v0.5.3"
+  revision = "c3e18be99d19e6b3e8f1559eea2c161a665c4b6b"
+  version = "v1.4.1"
 
 [[projects]]
   digest = "1:7cd2924a44ecf80a319cfa2378529fabd348d011b739fb4eccc565f65e3296c4"
@@ -159,7 +143,7 @@
   input-imports = [
     "github.com/gin-contrib/static",
     "github.com/gin-gonic/gin",
-    "github.com/hashicorp/go-memdb",
+    "github.com/gorilla/websocket",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1

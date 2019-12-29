@@ -12,6 +12,7 @@ import (
 
 var ws *Websocket
 
+// Response that return when web socket write json
 type SocketMessage struct {
 	Body      string    `json:"body"`
 	CreatedAt time.Time `json:"created_at"`

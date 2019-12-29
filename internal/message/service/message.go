@@ -11,8 +11,9 @@ type MessageService struct {
 }
 
 func NewMessageService() MessageService {
+	storage := memory.NewMessageStorage()
 	return MessageService{
-		Repository: memory.NewMessageRepository(),
+		Repository: memory.NewMessageRepository(storage),
 	}
 }
 

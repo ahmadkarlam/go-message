@@ -9,8 +9,7 @@ type MessageRepository struct {
 	storage *MessageStorage
 }
 
-func NewMessageRepository() repository.Repository {
-	storage := NewMessageStorage()
+func NewMessageRepository(storage *MessageStorage) repository.Repository {
 	return &MessageRepository{storage: storage}
 }
 

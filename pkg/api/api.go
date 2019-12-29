@@ -19,7 +19,7 @@ func Start(port string) error {
 
 	messageHandler := message.NewHandler()
 	r.GET("/v1/message", messageHandler.Get)
-	r.POST("/v1/message", messageHandler.Add)
+	r.POST("/v1/message", messageHandler.Store)
 
 	err := r.Run(":" + port)
 	if err != nil {
